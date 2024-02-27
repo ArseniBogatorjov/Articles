@@ -1,28 +1,30 @@
-INSERT INTO users(email, user_name, password, created_at) VALUES ("goga@goa.com", "GOOOOGA", "fufel", CURDATE());
-INSERT INTO users(email, user_name, password, created_at) VALUES ("buba@boa.com", "BUBKA", "bubuk", CURDATE());
-INSERT INTO users(email, user_name, password, created_at) VALUES ("goa@goa.com", "GALINA", "AJ", CURDATE());
+INSERT INTO users(email, user_name, password, created_at) VALUES ("ivan@gmail.com", "ivan", "123", CURDATE());
+INSERT INTO users(email, user_name, password, created_at) VALUES ("anton@gmail.com", "anton", "1234", CURDATE());
+INSERT INTO users(email, user_name, password, created_at) VALUES ("anna@gmail.com", "anna", "12345", CURDATE());
 
 INSERT INTO article(created_at, updated_at, user_id, description, slug, title, content) VALUES
-(CURDATE(), CURDATE(), 1, 'Статья́ — это жанр журналистики', 'journal', 'JOURNAL', 'Что-то на китайском');
+(CURDATE(), CURDATE(), 1, 'learn prgoramming', 'java', 'JAVA8', 'something about java');
 INSERT INTO article(created_at, updated_at, user_id, description, slug, title, content) VALUES
-(CURDATE(), CURDATE(), 2, 'О КИТАЙСКОМ', 'китайский-язычок', 'Китайский Язычок', 'Что-то про китайский');
+(CURDATE(), CURDATE(), 2, 'learn design', 'html and css', 'html5 and css3', 'something about html and css');
 INSERT INTO article(created_at, updated_at, user_id, description, slug, title, content) VALUES
-(CURDATE(), CURDATE(), 3, 'Коротко и ясно', 'незнайка', 'Незнайка', 'Даже не знаю про что это');
+(CURDATE(), CURDATE(), 3, 'web development', 'spring', 'java spring boot', 'something about spring boot');
 
-INSERT INTO tag(created_at, name) VALUES (CURDATE(),"language" );
-INSERT INTO tag(created_at, name) VALUES (CURDATE(),"magazin" );
+INSERT INTO tag(created_at, name) VALUES (CURDATE(),"programming" );
+INSERT INTO tag(created_at, name) VALUES (CURDATE(),"design" );
+INSERT INTO tag(created_at, name) VALUES (CURDATE(),"data work");
 
-INSERT INTO article_tag(article_id, tag_id) VALUES (1,2 );
-INSERT INTO article_tag(article_id, tag_id) VALUES (2,1 );
-INSERT INTO article_tag(article_id, tag_id) VALUES (3,1 );
+INSERT INTO article_tag(article_id, tag_id) VALUES (1,1);
+INSERT INTO article_tag(article_id, tag_id) VALUES (2,2);
+INSERT INTO article_tag(article_id, tag_id) VALUES (3,3);
 
-INSERT INTO comment(created_at,article_id,user_id, content) VALUES (CURDATE(),1,2, 'HELOOOOOO NICE ARTICLE');
-INSERT INTO comment(created_at,article_id,user_id, content) VALUES (CURDATE(),3,1, 'Поясните за третью статью, я чё-то не понял ');
-INSERT INTO comment(created_at,article_id,user_id, content) VALUES (CURDATE(),2,3, 'Я выучил китайский с этой книгой за 4 месяца, Я В ШОКЕ!!! ');
+INSERT INTO comment(created_at,article_id,user_id, content) VALUES (CURDATE(),1,2, 'useful article');
+INSERT INTO comment(created_at,article_id,user_id, content) VALUES (CURDATE(),3,1, 'u can learn web development with that');
+INSERT INTO comment(created_at,article_id,user_id, content) VALUES (CURDATE(),2,3, 'useful for designers');
 
 INSERT INTO article_favorite(article_id, user_id) VALUES (3,1);
-INSERT INTO article_favorite(article_id, user_id) VALUES (3,2);
-INSERT INTO article_favorite(article_id, user_id) VALUES (3,3);
+INSERT INTO article_favorite(article_id, user_id) VALUES (2,2);
+INSERT INTO article_favorite(article_id, user_id) VALUES (1,3);
 
 INSERT INTO user_follow(follower_id, following_id) VALUES (1,3);
 INSERT INTO user_follow(follower_id, following_id) VALUES (2,2);
+INSERT INTO user_follow(follower_id, following_id) VALUES (3,1);

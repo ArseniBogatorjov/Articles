@@ -41,8 +41,8 @@ public class User {
     @ManyToMany
     @JoinTable (
             name = "user_follow",
-            joinColumns = @JoinColumn (name = "following_id"),
-            inverseJoinColumns = @JoinColumn (name = "follower_id")
+            joinColumns = @JoinColumn (name = "follower_id"),
+            inverseJoinColumns = @JoinColumn (name = "following_id")
     )
     private List<Tag> tags;
 

@@ -20,7 +20,7 @@ public class ArticalsApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Article> list = articleRepository.findByTitle("JOURNAL");
+		List<Article> list = articleRepository.findByTitle("JAVA8");
 		for ( Article article: list) {
 			System.out.println(article);}
 	}

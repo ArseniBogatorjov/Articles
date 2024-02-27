@@ -1,6 +1,6 @@
 package com.example.Articals.entity;
 
-import jakarta.persistence.Entity;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

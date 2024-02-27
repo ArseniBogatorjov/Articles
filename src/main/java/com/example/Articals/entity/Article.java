@@ -1,11 +1,10 @@
 package com.example.Articals.entity;
 
-        import jakarta.persistence.*;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.tomcat.util.buf.UEncoder;
 
 import java.sql.Date;
 import java.util.List;
@@ -28,7 +27,7 @@ public class Article {
     @Column (nullable = false, length = 50)
     private String slug;
 
-    @Column (nullable = false, length = 2000)
+    @Column (nullable = false, length = 50)
     private String description;
 
     @Column (nullable = false, length = 1000)
@@ -65,20 +64,20 @@ public class Article {
     @JoinColumn(name = "article_id")
     private List<Comment> comment;
 
-    @Override
-    public String toString() {
-        return "Article" +
-                " " + id +
-                ", title '" + title + '\'' +
-                ", slug '" + slug + '\'' +
-                ", description '" + description + '\'' +
-                ", content '" + content + '\'' +
-                ", created_at " + created_at +
-                ", updated_at " + updated_at +
-                ", user " + user +
-                ", tags " + tags +
-                ", favoriteUsers " + favoriteUsers +
-                ", comment " + comment +
-                ' ';
-    }
+//     @Override
+//     public String toString() {
+//         return "Article" +
+//                 " " + id +
+//                 ", title '" + title + '\'' +
+//                 ", slug '" + slug + '\'' +
+//                 ", description '" + description + '\'' +
+//                 ", content '" + content + '\'' +
+//                 ", created_at " + created_at +
+//                 ", updated_at " + updated_at +
+//                 ", user " + user +
+//                 ", tags " + tags +
+//                 ", favoriteUsers " + favoriteUsers +
+//                 ", comment " + comment +
+//                 ' ';
+//     }
 }
